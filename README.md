@@ -36,7 +36,7 @@ This project is a Todo List application with the ability to create sub-todos, ma
 9. Start the development server: `php artisan serve`
 
 ## Credits
-This project was created by [Your Name] during their time as an OJT/Intern at Multisys.
+This project was created by [Zyril Evangelista] during their time as an OJT/Intern at Multisys.
 
 ## License
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the license terms.
