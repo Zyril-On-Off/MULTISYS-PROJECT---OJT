@@ -35,11 +35,133 @@ This project is a Todo List application with the ability to create sub-todos, ma
 8. Seed the database with sample data: `php artisan db:seed --class=UsersTableSeeder`, `php artisan db:seed --class=TodoSeeder`, `php artisan db:seed --class=SubtodoSeeder`.
 9. Start the development server: `php artisan serve`
 
-## Download
-[![Download Repository](https://img.shields.io/badge/Download-Repository-brightgreen)](https://github.com/Zyril-On-Off/MULTISYS-PROJECT---OJT/archive/refs/heads/main.zip)
+## Signal Towers Visualization
 
-## Credits
-This project was created by [Zyril Evangelista](https://www.facebook.com/zyril.evangelista.9) during their time as an Intern at Multisys.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Towers</title>
+<style>
+  :root {
+    --tower-width: 2.5rem;
+    --tower-height: 20rem;
+    --signal-bar-height-yellow: 6rem;
+    --signal-bar-height-orange: 3.5rem;
+    --signal-bar-height-red: 9.2rem;
+    --animation-duration: 1s;
+  }
 
-## License
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the license terms.
+  html {
+    font-size: 16px; /* Base font size */
+  }
+
+  .tower-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 12.5rem; /* 200px converted to rem */
+    margin-top: 3.125rem; /* 50px converted to rem */
+  }
+
+  .tower {
+    width: var(--tower-width);
+    background-color: #f0f0f0;
+    margin: 0 0.3125rem; /* 5px converted to rem */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    animation-duration: var(--animation-duration);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .yellow {
+    background-color: yellow;
+    animation-name: yellowAnimation;
+  }
+
+  .orange {
+    background-color: orange;
+    animation-name: orangeAnimation;
+  }
+
+  .red {
+    background-color: red;
+    animation-name: redAnimation;
+  }
+
+  .signal-bar {
+    height: var(--signal-bar-height-yellow);
+  }
+
+  .tower.orange .signal-bar {
+    height: var(--signal-bar-height-orange);
+  }
+
+  .tower.red .signal-bar {
+    height: var(--signal-bar-height-red);
+  }
+
+  @keyframes yellowAnimation {
+    0%, 100% {
+      height: var(--signal-bar-height-yellow);
+    }
+    25% {
+      height: 0;
+    }
+    50% {
+      height: var(--signal-bar-height-yellow);
+    }
+    75% {
+      height: var(--signal-bar-height-orange);
+    }
+  }
+
+  @keyframes orangeAnimation {
+    0%, 100% {
+      height: var(--signal-bar-height-orange);
+    }
+    25% {
+      height: var(--signal-bar-height-yellow);
+    }
+    50% {
+      height: var(--signal-bar-height-red);
+    }
+    75% {
+      height: var(--signal-bar-height-orange);
+    }
+  }
+
+  @keyframes redAnimation {
+    0%, 100% {
+      height: var(--signal-bar-height-red);
+    }
+    25% {
+      height: var(--signal-bar-height-orange);
+    }
+    50% {
+      height: var(--signal-bar-height-yellow);
+    }
+    75% {
+      height: var(--signal-bar-height-red);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="tower-container">
+    <div class="tower yellow">
+      <div class="signal-bar"></div>
+    </div>
+    <div class="tower orange">
+      <div class="signal-bar"></div>
+    </div>
+    <div class="tower red">
+      <div class="signal-bar"></div>
+    </div>
+  </div>
+</body>
+</html>
