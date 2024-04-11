@@ -35,6 +35,9 @@ This project is a Todo List application with the ability to create sub-todos, ma
 8. Seed the database with sample data: `php artisan db:seed --class=UsersTableSeeder`, `php artisan db:seed --class=TodoSeeder`, `php artisan db:seed --class=SubtodoSeeder`.
 9. Start the development server: `php artisan serve`
 
+## Download
+[![Download Repository](https://img.shields.io/badge/Download-Repository-brightgreen)](https://github.com/Zyril-On-Off/MULTISYS-PROJECT---OJT/archive/refs/heads/main.zip)
+
 ## Credits
 This project was created by [Zyril Evangelista](https://www.facebook.com/zyril.evangelista.9) during their time as an Intern at Multisys.
 
