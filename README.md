@@ -10,6 +10,8 @@ Welcome to my Final Project repository! This project was created during our time
   </a>
 </p>
 
+<a href="https://app.daily.dev/zyyev"><img src="https://api.daily.dev/devcards/v2/plPiUor5LFRKQbnx6g0aU.png?type=default&r=v4w" width="356" alt="Zyril Evangelista's Dev Card"/></a>
+
 ## Overview
 This project is a Todo List application with the ability to create sub-todos, manage tasks efficiently, and secure user authentication through JWT tokens.
 
